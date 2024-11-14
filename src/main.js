@@ -372,9 +372,6 @@ function processNotificationCount_MacOS(app, oldCount, newCount) {
     // increased, also bouce the icon the catch the user's attention.
     if (app.dock) {
         app.dock.setBadge(`${newCount/2 || ''}`);
-        if (newCount > oldCount) {
-            app.dock.bounce();
-        }
     }
 }
 
